@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family:  'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --main-color: hsl(235, 21%, 11%); 
+  --input-color: hsl(235, 24%, 19%);
+  --light-color: #e3f2fd;
+  --hover-color: rgb(158, 156, 156);
+  --light-mode-color: white
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.App{
+  background-color: var(--main-color);
+  height: 100vh;
+}
+.App_active{
+  background-color: var(--light-color);
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-body-container{
+  padding: 15px;
+}
+
+.head-title-sun-toggle{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 50px;
+}
+
+.main-input{
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: var(--input-color);
+  margin-top: 30px;
+  font-size: 23px;
+  color: white;
+}.main-input_active{
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: var(--light-mode-color);
+  margin-top: 30px;
+  font-size: 23px;
+  color: black;
+}
+.app-name{
+  font-size: 30px;
+  letter-spacing: 10px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.app-name_active{
+  font-size: large;
+  letter-spacing: 10px;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.the-list{
+  margin-top: 30px;
+  color: white;
+  background-color: var(--input-color);
+}.the-list_active{
+  margin-top: 30px;
+  color: white;
+  background-color: var(--light-mode-color);
+}
+
+.sub--sub-list {
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.sub-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgb(49, 49, 49);
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  
+}
+.sub-list_active{
+  display: none;
+}
+li{
+  list-style: none;
+  font-size: 20px;
+}li:hover{
+  list-style: none;
+  font-size: 20px;
+  color: var(--hover-color);
+}
+.unit-todo{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 10px;
+}
+.options  p{
+  font-size: 13px;
+}
+.sub-options{
+  display: flex;
+  gap: 5px;
+}
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+  .app-body-container{
+    padding: 15px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .main-input{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: var(--input-color);
+    margin-top: 30px;
+    font-size: 23px;
   }
+  li{
+    list-style: none;
+    font-size: 23px;
+  }li:hover{
+    color:var(--hover-color);
+    list-style: none;
+    font-size: 23px;
+  }
+  .options  p{
+    font-size: 20px;
+  }
+  .sub-options{
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.clear-all{
+  cursor: pointer;
+}.clear-all:hover{
+  color: var(--hover-color);
+  cursor: pointer;
 }

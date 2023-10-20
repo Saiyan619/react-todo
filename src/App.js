@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Body from './components/body';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Body />
     </div>
   );
 }
 
 export default App;
+
+// Functionalities to add(for now):
+// change to light mode
+// new todo is made when you click enter
+// cancel a todo
+// stike a todo when checkbox is checked and prolly change color of text
+// clear entire todolist
